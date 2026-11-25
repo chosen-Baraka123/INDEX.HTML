@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>New Life Everyday Church Ministries</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Public+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#F3F6FA;--ink:#16233B;--muted:#51607A;--card:#fff;--line:#D9E0EA;--gold:#E3A02F;--green:#2E7D5B;--on-gold:#16233B;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1829;--ink:#EAF0FA;--muted:#A3B2CC;--card:#17233A;--line:#2A3A57;--gold:#F0B455;--green:#5CC49A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1829;--ink:#EAF0FA;--muted:#A3B2CC;--card:#17233A;--line:#2A3A57;--gold:#F0B455;--green:#5CC49A;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Public Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.15;margin:0}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:.6em}
+h3{font-size:1.25rem}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0}
+p{max-width:62ch;margin:0 0 1em}
+.muted{color:var(--muted)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#16233B;z-index:20}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:#16233B;color:#fff}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:"Young Serif",Georgia,serif;font-size:1.1rem;text-decoration:none;line-height:1.1}
+nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0;align-items:center}
+nav a{text-decoration:none;font-size:.95rem}
+nav a:hover{text-decoration:underline}
+.btn{display:inline-block;border:0;border-radius:999px;padding:.8rem 1.5rem;font:700 1rem "Public Sans",sans-serif;background:var(--gold);color:var(--on-gold);text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:inherit;border:2px solid currentColor}
+.btn:hover{filter:brightness(1.07)}
+#menu{display:none;background:none;border:2px solid #fff;color:#fff;border-radius:8px;padding:.4rem .7rem;font:inherit}
+@media(max-width:760px){
+#menu{display:block}
+nav{display:none;position:absolute;top:64px;left:0;right:0;background:#16233B;padding:1rem 1.25rem 1.5rem}
+nav.open{display:block}
+nav ul{flex-direction:column;align-items:flex-start;gap:1rem}}
+.hero{position:relative;overflow:hidden;color:#fff;padding:6rem 0 9rem;background:linear-gradient(180deg,#16233B 0%,#2B3F6B 55%,#8A6A5A 85%,#E3A02F 100%)}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:clamp(2.4rem,7vw,4.6rem);line-height:1.05;max-width:14ch;margin:0 0 .5em}
+.hero p{font-size:1.2rem;max-width:44ch;color:#E6ECF7}
+.sun{position:absolute;left:50%;bottom:-170px;width:340px;height:340px;margin-left:-170px;border-radius:50%;background:radial-gradient(circle,#FFE6A6 0%,#F5B94A 60%,#E3A02F 100%);box-shadow:0 0 120px 40px rgba(245,185,74,.45);animation:rise 2.4s ease-out both}
+@keyframes rise{from{transform:translateY(240px)}to{transform:none}}
+@media(prefers-reduced-motion:reduce){.sun{animation:none}html{scroll-behavior:auto}}
+.chip{display:inline-block;margin:0 0 1.6rem;padding:.5rem 1rem;border:1px solid rgba(255,255,255,.4);border-radius:999px;font-size:.95rem;background:rgba(22,35,59,.5)}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap}
+table{border-collapse:collapse;width:100%;max-width:640px}
+td,th{text-align:left;padding:.85rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:700;width:34%}
+tr.next td,tr.next th{background:color-mix(in srgb,var(--gold) 22%,transparent)}
+.two{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem}
+@media(max-width:760px){.two{grid-template-columns:1fr;gap:2rem}}
+.alt{background:var(--card);border-block:1px solid var(--line)}
+.list{list-style:none;margin:0;padding:0}
+.list li{padding:1.1rem 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:200px 1fr;gap:1rem}
+.list li:first-child{border-top:1px solid var(--line)}
+.list h3{color:var(--green)}
+@media(max-width:640px){.list li{grid-template-columns:1fr;gap:.2rem}}
+.events li{grid-template-columns:130px 1fr}
+.date{font-weight:700;color:var(--green)}
+form{display:grid;gap:1rem;max-width:560px}
+label{font-weight:500;display:grid;gap:.35rem}
+input,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:.75rem .9rem;width:100%}
+textarea{min-height:130px;resize:vertical}
+.msg{min-height:1.5em;font-weight:500;color:var(--green)}
+.give{background:#16233B;color:#fff;border-radius:18px;padding:2rem;max-width:560px}
+.give dl{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1.2rem;margin:1rem 0 1.5rem}
+.give dt{color:#B8C4DB}.give dd{margin:0;font-weight:700;font-size:1.15rem}
+footer{background:#16233B;color:#C9D4E8;padding:2.5rem 0 3rem;font-size:.95rem}
+footer a{color:#fff}
+.verse{font-family:"Young Serif",Georgia,serif;font-size:1.25rem;color:#fff;max-width:36ch}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap bar">
+<a class="logo" href="#top">New Life Everyday<br><small style="font-family:'Public Sans',sans-serif;font-size:.7rem;opacity:.8">Church Ministries</small></a>
+<button id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" aria-label="Main">
+<ul>
+<li><a href="#visit">Visit</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#ministries">Ministries</a></li>
+<li><a href="#events">Events</a></li>
+<li><a href="#prayer">Prayer</a></li>
+<li><a class="btn" href="#give">Give</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main id="top">
+<div class="hero">
+<div class="sun" aria-hidden="true"></div>
+<div class="wrap">
+<p class="chip" id="next">Loading next service…</p>
+<h1>New life, every single day.</h1>
+<p>A church family where you can find hope, grow in faith and serve your community. Everyone is welcome.</p>
+<div class="cta">
+<a class="btn" href="#visit">Plan your visit</a>
+<a class="btn ghost" href="#prayer">Send a prayer request</a>
+</div>
+</div>
+</div>
+
+<section id="visit">
+<div class="wrap two">
+<div>
+<h2>Join us this week</h2>
+<table>
+<tbody id="times"></tbody>
+</table>
+</div>
+<div>
+<h3>Where to find us</h3>
+<p id="addr" class="muted"></p>
+<p><a class="btn" id="dir" href="#" target="_blank" rel="noopener">Get directions</a></p>
+<p class="muted">First time? Arrive 15 minutes early and our welcome team will help you settle in.</p>
+</div>
+</div>
+</section>
+
+<section id="about" class="alt">
+<div class="wrap two">
+<div>
+<h2>Who we are</h2>
+<p>New Life Everyday Church Ministries is a community of believers who trust that God makes things new every morning. We gather to worship, study the Bible, pray for one another and serve the people around us.</p>
+<p>Whatever you are carrying, you do not have to carry it alone.</p>
+</div>
+<div>
+<h3>What we believe</h3>
+<p>We believe in one God, the Bible as His Word, salvation through Jesus Christ, and the power of the Holy Spirit to change lives daily.</p>
+<p class="verse">“His mercies are new every morning.”<br><small style="font-family:'Public Sans',sans-serif;font-size:.85rem;color:var(--muted)">Lamentations 3:23</small></p>
+</div>
+</div>
+</section>
+
+<section id="ministries">
+<div class="wrap">
+<h2>Ways to belong</h2>
+<ul class="list" id="min"></ul>
+</div>
+</section>
+
+<section id="events" class="alt">
+<div class="wrap">
+<h2>Coming up</h2>
+<ul class="list events" id="ev"></ul>
+</div>
+</section>
+
+<section id="prayer">
+<div class="wrap two">
+<div>
+<h2>How can we pray for you?</h2>
+<p>Share a need and our prayer team will lift it up. You can leave your name off if you prefer.</p>
+</div>
+<form id="pf" novalidate>
+<label>Your name (optional)<input id="pn" autocomplete="name"></label>
+<label>Prayer request<textarea id="pr" required></textarea></label>
+<div class="cta">
+<a class="btn" id="wa" href="#" target="_blank" rel="noopener">Send on WhatsApp</a>
+<a class="btn ghost" id="sm" href="#">Send as SMS</a>
+<button class="btn ghost" type="button" id="cp">Copy request</button>
+<button class="btn ghost" type="button" id="em">Send by email</button>
+</div>
+<div class="msg" id="pm" role="status"></div>
+</form>
+</div>
+</section>
+
+<section id="give" class="alt">
+<div class="wrap">
+<h2>Give</h2>
+<p>Your giving supports worship, outreach and care for families in need. Thank you for your generosity.</p>
+<div class="give">
+<h3>Give by M-Pesa</h3>
+<dl id="mp"></dl>
+<button class="btn" id="copy">Copy number</button>
+<div class="msg" id="cm" role="status" style="color:#8BE0B8"></div>
+</div>
+</div>
+</section>
+</main>
+
+<footer id="contact">
+<div class="wrap two">
+<div>
+<p class="verse">Come as you are. Leave with hope.</p>
+<p>© <span id="yr"></span> New Life Everyday Church Ministries</p>
+</div>
+<div id="links"></div>
+</div>
+</footer>
+
+<script>
+/* ===== EDIT THIS BLOCK TO UPDATE THE WEBSITE ===== */
+var CONFIG={
+phone:"+254701876027",
+whatsapp:"254701876027",
+email:"",
+address:"P.O. Box 36-90401, Kyuso",
+mapQuery:"Kyuso, Kenya",
+mpesa:{type:"Send money (M-Pesa)",number:"0726898409",account:""},
+facebook:"",youtube:"",instagram:"",
+services:[
+{label:"Sunday",days:[0],h:9,m:0,time:"9:00 AM",name:"Sunday Celebration Service"},
+{label:"Every morning",days:[0,1,2,3,4,5,6],h:4,m:0,time:"4:00 AM",name:"Morning Prayers"},
+{label:"Wednesday",days:[3],h:18,m:0,time:"6:00 PM",name:"Bible Study and Prayer"},
+{label:"Friday",days:[5],h:18,m:0,time:"6:00 PM",name:"Youth and Young Adults"}
+],
+ministries:[
+["Praise and worship","Lifting our voices together to honour God in every service."],
+["Women’s fellowship","Prayer, mentoring and support for women of every season of life."],
+["Sunday school","Bible lessons, songs and activities for our children."],
+["Choir","Singing to God’s glory. Come and serve with your voice."],
+["Intercessors","A team that stands in the gap and prays for the church, families and community."]
+],
+events:[
+["First Sunday","Communion Service","All members and guests are invited."],
+["Last Saturday","Community Outreach Day","Meet at the church at 8:00 AM."],
+["Coming soon","Annual Family Retreat","Details will be announced on Sunday."]
+]};
+/* ================================================== */
+var D=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+function $(i){return document.getElementById(i)}
+function esc(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML}
+function nextService(){
+var now=new Date(),best=null;
+CONFIG.services.forEach(function(s){s.days.forEach(function(d){
+var t=new Date(now);t.setHours(s.h,s.m,0,0);
+t.setDate(t.getDate()+((d-now.getDay()+7)%7));
+if(t<=now)t.setDate(t.getDate()+7);
+if(!best||t<best.t)best={t:t,s:s,d:d}})});
+return best}
+function render(){
+var n=nextService(),diff=n.t-new Date(),hrs=Math.round(diff/36e5),when;
+if(hrs<1)when="starting soon";else if(hrs<24)when="in "+hrs+(hrs===1?" hour":" hours");
+else{var dd=Math.round(hrs/24);when="in "+dd+(dd===1?" day":" days")}
+$("next").textContent="Next: "+n.s.name+", "+D[n.d]+" "+n.s.time+" ("+when+")";
+$("times").innerHTML=CONFIG.services.map(function(s){
+return '<tr'+(s===n.s?' class="next"':'')+'><th>'+esc(s.label)+'</th><td>'+esc(s.time)+'<br><span class="muted">'+esc(s.name)+'</span></td></tr>'}).join("")}
+render();setInterval(render,60000);
+$("addr").textContent=CONFIG.address;
+$("dir").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(CONFIG.mapQuery);
+$("min").innerHTML=CONFIG.ministries.map(function(m){return '<li><h3>'+esc(m[0])+'</h3><p style="margin:0">'+esc(m[1])+'</p></li>'}).join("");
+$("ev").innerHTML=CONFIG.events.map(function(e){return '<li><span class="date">'+esc(e[0])+'</span><div><h3>'+esc(e[1])+'</h3><p class="muted" style="margin:.2em 0 0">'+esc(e[2])+'</p></div></li>'}).join("");
+var mp=CONFIG.mpesa;
+$("mp").innerHTML='<dt>'+esc(mp.type)+'</dt><dd>'+esc(mp.number)+'</dd>'+(mp.account?'<dt>Account</dt><dd>'+esc(mp.account)+'</dd>':'');
+$("copy").onclick=function(){
+var done=function(){$("cm").textContent="Copied "+mp.number};
+try{navigator.clipboard.writeText(mp.number).then(done,function(){$("cm").textContent="Copy failed. Please copy "+mp.number+" by hand."})}
+catch(e){$("cm").textContent="Copy failed. Please copy "+mp.number+" by hand."}};
+function prayerText(){
+var n=$("pn").value.trim(),r=$("pr").value.trim();
+if(!r){$("pm").textContent="Please write your prayer request first.";$("pm").style.color="#B3261E";$("pr").focus();return null}
+$("pm").style.color="";
+return "Prayer request"+(n?" from "+n:"")+":\n"+r}
+$("wa").onclick=function(e){var t=prayerText();if(!t){e.preventDefault();return}this.href="https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(t);$("pm").textContent="Opening WhatsApp. If it is blocked, use Send as SMS or Copy request."};
+$("sm").onclick=function(e){var t=prayerText();if(!t){e.preventDefault();return}this.href="sms:"+CONFIG.phone+"?body="+encodeURIComponent(t);$("pm").textContent="Your messages app should open. Press send to share your request."};
+$("cp").onclick=function(){var t=prayerText();if(!t)return;try{navigator.clipboard.writeText(t).then(function(){$("pm").textContent="Copied. Paste it into WhatsApp and send it to "+CONFIG.phone+"."},function(){$("pm").textContent="Copy failed. Please select your text and copy it by hand."})}catch(e){$("pm").textContent="Copy failed. Please select your text and copy it by hand."}};
+$("em").onclick=function(){var t=prayerText();if(t){location.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent("Prayer request")+"&body="+encodeURIComponent(t);$("pm").textContent="Your email app should open. Press send to share your request."}};
+var L=['<p>Call or WhatsApp: <a href="tel:'+esc(CONFIG.phone)+'">'+esc(CONFIG.phone)+'</a></p>'];if(CONFIG.email)L.push('<p>Email: <a href="mailto:'+esc(CONFIG.email)+'">'+esc(CONFIG.email)+'</a></p>');if(!CONFIG.email)$("em").style.display="none";
+[["facebook","Facebook"],["youtube","YouTube"],["instagram","Instagram"]].forEach(function(x){if(CONFIG[x[0]])L.push('<p><a href="'+esc(CONFIG[x[0]])+'" target="_blank" rel="noopener">'+x[1]+'</a></p>')});
+$("links").innerHTML=L.join("");
+$("yr").textContent=new Date().getFullYear();
+$("menu").onclick=function(){var o=$("nav").classList.toggle("open");this.setAttribute("aria-expanded",o)};
+$("nav").onclick=function(e){if(e.target.tagName==="A"){$("nav").classList.remove("open");$("menu").setAttribute("aria-expanded","false")}};
+</script>
+</body>
+</html>
